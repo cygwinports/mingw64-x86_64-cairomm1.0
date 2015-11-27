@@ -2,8 +2,8 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross gtkmm
 
 NAME="mingw64-x86_64-cairomm1.0"
-VERSION=1.10.0
-RELEASE=4
+VERSION=1.12.0
+RELEASE=1
 SUMMARY="Cairo C++ bindings for Win64 toolchain"
 DESCRIPTION="This package does NOT contain cygwin binaries.  Instead, it
 contains msvcrt-linked binaries (aka 'mingw').  It is for use with the
@@ -12,6 +12,7 @@ mingw64-x86_64-gcc cross compiler, and installs into the
 HOMEPAGE="http://cairographics.org/cairomm"
 SRC_URI="http://cairographics.org/releases/cairomm-${VERSION}.tar.gz"
 SRC_DIR="cairomm-${VERSION}"
+PATCH_URI="1.12.0-std-c++11.patch"
 
 CYGCONF_ARGS="--disable-documentation"
 
